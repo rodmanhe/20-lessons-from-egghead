@@ -6,10 +6,15 @@ import "angular2/angular2";
 import {bootstrap} from "angular2/platform/browser";
 import {Component} from "angular2/core";
 
+import {TodoInput} from "../src/components/todo-input";
+
 @Component({
   selector: `app`,
-  template: `<div>hello world</div>`
-})
+  directives: [TodoInput],
+  template: `<div>
+    hello world
+    <todo-input></todo-input>
+  </div>`
 
 class App{}
 
