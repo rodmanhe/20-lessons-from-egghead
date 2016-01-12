@@ -3,18 +3,14 @@ import 'reflect-metadata'
 import 'zone.js'
 import "angular2/angular2";
 
-import {Component} from "angular2/core";
 import {bootstrap} from "angular2/platform/browser";
+import {Component} from "angular2/core";
 
 @Component({
-    selector:`app`,
-    template: `<div>
-        {{message}}
-    </div>`
+  selector: `app`,
+  template: `<div>hello world</div>`
 })
-class App{
-    message = `Hello world!`;
-}
+
+class App{}
 
 bootstrap(App);
-
