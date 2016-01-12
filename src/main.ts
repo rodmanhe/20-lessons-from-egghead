@@ -15,6 +15,7 @@ import {TodoInput} from "../src/components/todo-input";
     hello world
     <todo-input></todo-input>
   </div>`
+})
 
 class App{}
 
