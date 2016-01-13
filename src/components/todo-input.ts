@@ -1,15 +1,19 @@
 import {Component} from "angular2/core";
+import {TodoService} from "../services/todo-service";
 
 @Component({
   selector: 'todo-input',
   template: `<div>
   <input type="text" #myInput>
-  <button (click)="onClick($event, myInput.value)" >Click this button</button>
+  <button (click)="onClick(myInput.value)" >Click this button</button>
   </div>`
 })
 
 export class TodoInput{
-  onClick(event, value) {
-    console.log("event: "+ event + ", value: " + value);
+  constructor(public todoService: TodoService) {}
+
+  onClick(value) {
+    this.todoService.todos.push(value);
+    console.log(this.todoService.todos);
   }
 }
